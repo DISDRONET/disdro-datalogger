@@ -1,14 +1,9 @@
-import serial
 from .disdrometer import Disdrometer
-
-BAUD = 19200
-READ_DELAY = 1
 
 
 class Parsivel(Disdrometer):
-    def __init__(self, device='/dev/ttyUSB0'):
+    def __init__(self):
         super().__init__()
-        self.ser = serial.Serial(device, BAUD, timeout=READ_DELAY)
 
-    def readline(self):
+    def configure(self):
         self.ser.readline()

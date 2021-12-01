@@ -5,3 +5,5 @@ def get_device_type():
     the disdrometer is.
     """
     pass
+
+# look into https://pythonhosted.org/pyserial/shortintro.html#listing-ports

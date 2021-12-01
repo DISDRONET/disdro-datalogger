@@ -1,6 +1,8 @@
 import time
+from .parsivel import Parsivel
+from .thies import Thies
 
 
-class DataLogger(object):
+class ParsivelDataLogger(Parsivel):
     def __init__(self):
-        pass
+        super().__init__()
