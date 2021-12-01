@@ -7,7 +7,7 @@ class Parsivel(Disdrometer):
         super().__init__()
 
     def configure(self):
-        pass
+        self.set_real_time()
 
     # TODO: ask Rob details
     def ask_real_time(self, command='CS/U\r'):

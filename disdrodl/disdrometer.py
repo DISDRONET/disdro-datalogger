@@ -1,4 +1,5 @@
 from .utils import get_device_type
+from dataclasses import dataclass
 import serial
 import logging
 
@@ -10,6 +11,7 @@ logger = logging.getLogger('disdrometer_logger')
 logger.setLevel(logging.INFO)
 
 
+@dataclass
 class Disdrometer:
     """Class representing a disdrometer.
 
@@ -17,10 +19,9 @@ class Disdrometer:
         device_type (str): The device type.
         device_port (str): The device port.
     """
-    def __init__(self, device_type='parsivel', device_port='/dev/ttyUSB0'):
-        self.device_type = device_type
-        self.device_port = device_port
-        self.ser = serial.Serial(timeout=READ_DELAY)
+    device_type: str = 'parsivel'
+    device_port: str = '/dev/ttyUSB0'
+    ser: serial.Serial = serial.Serial(timeout=READ_DELAY)
 
     def connect(self):
         """
