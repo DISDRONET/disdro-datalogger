@@ -1,7 +1,10 @@
 
+import time
 
-port = '/dev/ttyUSB0'
-baud = 19200
+PORT = '/dev/ttyUSB0'
+PARSIVEL_BAUDRATE = 19200
+
+
 Parsivel_name = 'PAR002'
 Parsivel_ID = '002'
 parsivel_telegram_command = 'CS/RA\r'  # Asks the Parsivel to read out all fields
