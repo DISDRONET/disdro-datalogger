@@ -8,6 +8,8 @@ from variables import Variable
 
 parsivel = serial.Serial(Variable.PORT, Variable.PARSIVEL_BAUDRATE, timeout=1)  # Defines the serial port
 parsivel.reset_input_buffer()  # Flushes input buffer
+
+
 # parsivel.write(parsivel_ott_telegram.encode('utf-8')) # Writes the Parsivel OTT telegram command to the Parsivel
 # parsivel.write(parsivel_set_telegram_list.encode('utf-8')) # Writes the parsivel user telegram string to the Parsivel
 # parsivel.write(parsivel_telegram_command.encode('utf-8'))
@@ -54,6 +56,7 @@ def main():
                 print(e.message)
             else:
                 print(e)
+
 
 if __name__ == '__main__':
     main()
