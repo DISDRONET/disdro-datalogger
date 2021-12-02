@@ -7,9 +7,6 @@ PARSIVEL_BAUD = 19200
 THIES_BAUD = 9600
 READ_DELAY = 1
 
-logger = logging.getLogger('disdrometer_logger')
-logger.setLevel(logging.INFO)
-
 
 @dataclass
 class Disdrometer:
@@ -18,6 +15,7 @@ class Disdrometer:
     Attributes
         device_type (str): The device type.
         device_port (str): The device port.
+        ser (serial.Serial): The serial connection.
     """
     device_type: str = 'parsivel'
     device_port: str = '/dev/ttyUSB0'

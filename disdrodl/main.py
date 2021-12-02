@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
-import csv
+# import csv
 import time
 import serial
 
-parsivel = serial.Serial('/dev/ttyUSB0', baudrate=19200, timeout=1)  # Defines the serial port
-parsivel.reset_input_buffer()  # Flushes input buffer
+# parsivel = serial.Serial('/dev/ttyUSB0', baudrate=19200, timeout=1)  # Defines the serial port
+# parsivel.reset_input_buffer()  # Flushes input buffer
 
 Parsivel_name = 'PAR002'
 Parsivel_ID = '002'
@@ -75,6 +75,5 @@ def main():
             else:
                 print(e)
 
-
 if __name__ == '__main__':
-    main()
+    pass
