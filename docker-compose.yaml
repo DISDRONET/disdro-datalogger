@@ -1,0 +1,15 @@
+version: '2'
+volumes:
+    disdrodl-data:
+services:
+  datalogger:
+    restart: always
+    build: ./disdrodl
+    # check https://www.balena.io/docs/learn/develop/hardware/
+    devices:
+      - "/dev/ttyUSB0:/dev/ttyUSB0"
+    cap_add:
+      - SYS_RAWIO
+    volumes:
+      - 'disdrodl-data:/data'
+#      - 'disdrodl-data/sqlite.db:/disdrodl-data/sqlite.db'

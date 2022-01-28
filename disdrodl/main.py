@@ -74,6 +74,3 @@ def main():
                 print(e.message)
             else:
                 print(e)
-
-if __name__ == '__main__':
-    pass

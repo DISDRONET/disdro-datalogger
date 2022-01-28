@@ -1,4 +1,4 @@
-from .disdrometer import Disdrometer
+from disdrodl.disdrometer import Disdrometer
 import time
 
 
@@ -20,4 +20,7 @@ class Parsivel(Disdrometer):
         self.ser.write(command.encode('utf-8'))
 
     def ask_user_telegram(self, command='CS/M/M/1\r'):
+        self.ser.write(command.encode('utf-8'))
+
+    def request_field_61(self, command='CS/R/61\r'):
         self.ser.write(command.encode('utf-8'))

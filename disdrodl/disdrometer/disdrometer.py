@@ -1,4 +1,4 @@
-from .utils import get_device_type
+from disdrodl.utils import get_device_type
 from dataclasses import dataclass
 import serial
 import logging
@@ -33,8 +33,8 @@ class Disdrometer:
 
         try:
             self.ser.open()
-            logger.info("Device connected!")
+            logging.info("Device connected!")
         except Exception as e:
-            logger.error('Failed to connect: ' + str(e))
+            logging.error('Failed to connect: ' + str(e))
 
-        self.ser.reset_input_buffer()
+        # self.ser.reset_input_buffer()
