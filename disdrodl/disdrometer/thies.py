@@ -1,4 +1,4 @@
-from .disdrometer import Disdrometer
+from disdrometer import Disdrometer
 
 
 class Thies(Disdrometer):

@@ -1,4 +1,4 @@
-from disdrodl.disdrometer import Disdrometer
+from disdrometer import Disdrometer
 import time
 
 
